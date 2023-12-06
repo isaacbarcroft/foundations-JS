@@ -14,7 +14,6 @@ const randomColor = () => {
   return `rgb(${r},${g},${b})`;
 };
 
-// This function will not execute immediately, but will be executed when the button is clicked
 function trackUserHandler(buttonId) {
   console.log(`You Clicked The Button with the ${buttonId} Id`);
 }
@@ -22,6 +21,16 @@ function trackUserHandler(buttonId) {
 const reset = () => {
   window.location.reload();
 };
+
+const addImage = () => {
+  console.log("clicked");
+  const url = "http://placekitten.com/200/300";
+  document.querySelector("img").setAttribute("src", url);
+  document.querySelector("img").setAttribute("alt", "kitten");
+  document.querySelector("img").classList.add("img");
+  document.querySelector(".add-bg").setAttribute("disabled", true);
+};
+document.querySelector(".add-bg").addEventListener("click", addImage);
 
 button.addEventListener("click", () => {
   trackUserHandler(button.id);
