@@ -1,0 +1,13 @@
+.red-bg {
+  background-color: red;
+  color: blue;
+  width: 64px;
+  height: 64px;
+}
+
+.green-bg {
+  background-color: green;
+  color: white;
+  width: 64px;
+  height: 64px;
+}
