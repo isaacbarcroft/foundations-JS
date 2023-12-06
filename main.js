@@ -55,3 +55,21 @@ buttonTwo.addEventListener("click", () => {
 });
 
 resetBtn.addEventListener("click", reset);
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", (e) => {
+    console.log(e.target.checked);
+    if (e.target.checked) {
+      console.log("checked");
+      console.log(checkbox.parentElement);
+      const p = document.createElement("p");
+      p.innerHTML = "This checkbox is checked";
+      checkbox.parentElement.appendChild(p);
+    }
+    if (!e.target.checked) {
+      console.log("unchecked");
+      console.log(checkbox.parentElement);
+      checkbox.parentElement.lastChild.remove();
+    }
+  });
+});
