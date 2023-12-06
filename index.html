@@ -7,15 +7,21 @@
     <link href="main.css" rel="stylesheet" />
   </head>
   <body>
-    <di class="firstContainer">
-      <h1 class="h1">My First Heading</h1>
-      <p>My first paragraph.</p>
-      <button id="btn">Click me</button>
-    </di>
-    <div>
-      <h1>My Second Heading</h1>
-      <p>My second paragraph.</p>
-      <button id="btn2">Click me</button>
+    <div style="display: flex; justify-content: space-around">
+      <div class="firstContainer">
+        <h1 class="h1">My First Heading</h1>
+        <p>My first paragraph.</p>
+        <button class="buttons" id="btn">Click me</button>
+      </div>
+      <div>
+        <h1>My Second Heading</h1>
+        <p>My second paragraph.</p>
+        <button class="buttons" id="btn2">Click me</button>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 60px">
+      <button id="reset">Reset</button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
