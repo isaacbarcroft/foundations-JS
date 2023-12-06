@@ -3,11 +3,24 @@ const output = document.querySelector("p");
 const buttonTwo = document.getElementById("btn2");
 const title = document.querySelector(".h1");
 const div = document.querySelector(".firstContainer");
+const resetBtn = document.querySelector("#reset");
+
+const randomColor = () => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 265);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+};
 
 // This function will not execute immediately, but will be executed when the button is clicked
 function trackUserHandler(buttonId) {
   console.log(`You Clicked The Button with the ${buttonId} Id`);
 }
+
+const reset = () => {
+  window.location.reload();
+};
+
 button.addEventListener("click", () => {
   trackUserHandler(button.id);
   button.classList.toggle("red-bg");
@@ -28,6 +41,7 @@ buttonTwo.addEventListener("click", () => {
   trackUserHandler(buttonTwo.id);
   const newP = document.createElement("p");
   newP.innerHTML = "This is a new paragraph";
+  newP.style.color = randomColor();
   buttonTwo.classList.toggle("green-bg");
   div.appendChild(newP);
   if (buttonTwo.classList.contains("green-bg")) {
@@ -37,3 +51,5 @@ buttonTwo.addEventListener("click", () => {
     buttonTwo.innerHTML = "Click Me";
   }
 });
+
+resetBtn.addEventListener("click", reset);
