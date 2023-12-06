@@ -4,6 +4,8 @@ const buttonTwo = document.getElementById("btn2");
 const title = document.querySelector(".h1");
 const div = document.querySelector(".firstContainer");
 const resetBtn = document.querySelector("#reset");
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+console.log({ checkboxes });
 
 const randomColor = () => {
   const r = Math.floor(Math.random() * 256);
