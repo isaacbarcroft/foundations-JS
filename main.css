@@ -11,3 +11,29 @@
   width: 64px;
   height: 64px;
 }
+
+#reset {
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  color: black;
+}
+
+#reset:hover {
+  background-color: black;
+  color: white;
+  border: 3px groove pink;
+  transform: matrix(1, -0.1, 0, 1, 0, 0);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.buttons:hover {
+  background-color: black;
+  color: white;
+  border: 3px solid pink;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0.1, 1, 0, 0, 0, 0, 1);
+  translate: 0.9px;
+}
