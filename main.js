@@ -29,7 +29,7 @@ const reset = () => {
 const addImage = () => {
   console.log("clicked");
   // set my url to a variable
-  const url = "http://placekitten.com/200/300";
+  const url = "assests/pexels-pixabay-416160.jpg";
   // set the src and alt attributes of the image
   document.querySelector("img").setAttribute("src", url);
   document.querySelector("img").setAttribute("alt", "kitten");
